@@ -1,1 +1,120 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css"><title>CV</title></head><body><h1>Uladzislau</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/monokai.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Uladzislau Tsemenka</title>
+</head>
+
+<body>
+    <div class="wrapper">
+            <header>
+                <figure class="avatar">
+                    <img src="img/i.jpg" alt="Uladzislau Tsemenka" width="300" height="400">
+                </figure>
+                <div class="info">
+                    <h1>Uladzislau Tsemenka</h1>
+                    <ul>
+                        <li>E-mail: wladyslaw.tsemenko@gmail.com</li>
+                        <li>English: pre-intermediate (A2)</li>
+                    </ul>
+                </div>
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="#Summary">Summary</a></li>
+                        <li><a href="#Technical">Skills</a></li>
+                        <li><a href="#Professional">Experience</a></li>
+                        <li><a href="#Education">Education</a></li>
+                        <li><a href="#Code">Code</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <main class="main">
+            <section id="Summary">
+                <h2>Summary of Qualifications</h2>
+                <p>Novice frontend-developer with technical education. Basic knowledge of HTML, CSS/SaSS, JavaScript,
+                    PHP, SQL.</p>
+            </section>
+            <section id="Technical">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Programming languages and technologies: PHP, SQL, 1C, JavaScript, HTML, CSS/SaSS</li>
+                    <li>Frameworks and Libraries: Bootstrap</li>
+                    <li>Tools: GIT, VS Code; Adobe: Photoshop, Lightroom, Audition; Figma; 3DsMax; CoralDraw.</li>
+                    <li>CMS & CRM: Wordpress, 1C Предприятие.</li>
+                    <li>Other skills: photo/music editing, design, photography.</li>
+                </ul>
+            </section>
+            <section id="Professional">
+                <h2>Professional Experience</h2>
+                <p>Freelance, 03.2021 – now</p>
+            </section>
+            <section id="Education">
+                <h2>Education</h2>
+                <p>Belarusian National Technical University, Minsk<br>
+                    Bachelor, Automated Data Processing Systems</p>
+            </section>
+            <section id="Code">
+                <h2>Code</h2>
+                    <pre style="background-color: inherit;">
+                        <code data-language="javascript">
+    app.get('/posts', (req, res) => {
+
+        let foundPosts = db.posts;
+    
+        if (req.query.title) {
+            foundPosts = db.posts.filter(
+                item => item.title.indexOf(req.query.title) > -1
+            );
+        }
+    
+        if (!foundPosts.length) {
+            res.sendStatus(HTTP_STATUSES.NOT_FOUND_404);
+            return;
+        }
+    
+        res.json(foundPosts)
+    
+    });
+                        </code>
+                    </pre>
+            </section>
+            <section id="Projects">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <a href="https://rolling-scopes-school.github.io/m1ndseeker-JSFEPRESCHOOL/js-clock/" target="_blank">
+                            <img src="img/js30.jpeg" class="project--image" alt="JS_CLOCK">
+                            <div class="project--description">
+                                <h3>HTML5, CSS, Javascript</h3>
+                                <h2>JS Clock</h2>
+                                <p>
+                                    JS Clock - mechanical watch with moving hands and following functionality:
+                                    exact time (hours minutes and seconds), full name of the day of the week, date (day and month name), year and
+                                    ability to switch dark/light theme.
+                                </p>
+                            </div>
+                        </a>
+                    </div>  
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer class="footer">
+            <ul>
+                <li><a href="https://github.com/Wladec" target="_blank" class="github"></a></li>
+                <li>2022&#169;</li>
+                <li><a href="https://rs.school/js/" target="_blank" class="rsschool"></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="js/rainbow.js"></script>
+    <script src="js/generic.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+</html>
